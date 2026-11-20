@@ -1,0 +1,31 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.layout-main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding-top: var(--header-height);
+  transition: margin-left var(--transition-normal);
+}
+
+.layout-main.sidebar-collapsed {
+  margin-left: var(--sidebar-collapsed);
+}
+
+.layout-content {
+  padding: 2rem;
+  max-width: 1400px;
+  animation: fadeIn 0.35s ease;
+}
+
+@media (max-width: 768px) {
+  .layout-main {
+    margin-left: 0 !important;
+  }
+
+  .layout-content {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,74 @@
+.transactions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tx-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tx-search-box {
+  display: flex;
+  align-items: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0 0.875rem;
+  min-width: 280px;
+  flex: 1;
+  max-width: 400px;
+  transition: border-color var(--transition-fast);
+}
+
+.tx-search-box:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.tx-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.type-toggle-group {
+  display: flex;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+}
+
+.type-btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+}
+
+.type-btn:hover {
+  color: var(--text-primary);
+}
+
+.type-btn.active {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.type-btn.in.active {
+  background: var(--success-dim);
+  color: var(--success);
+}
+
+.type-btn.out.active {
+  background: var(--danger-dim);
+  color: var(--danger);
+}
